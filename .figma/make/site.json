@@ -1,0 +1,10 @@
+{
+  "description": "Provides a professional TV streaming interface with live channels, replays, highlights, favorites, and remote-friendly navigation for seamless entertainment.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

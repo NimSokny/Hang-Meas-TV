@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Roboto', system-ui, sans-serif;
+  --color-bg: #000;
+  --color-surface: #121212;
+  --color-surface-2: #1c1c1e;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-gold: #f5c518;
+  --color-gold-ink: #1a1400;
+  --color-mute: #a1a1a6;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  font-size: clamp(13px, 0.83vw, 20px);
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Roboto', system-ui, sans-serif;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.tv {
+  outline: none;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+.tv:focus {
+  box-shadow:
+    0 0 0 3px #000,
+    0 0 0 6px #f5c518;
+  transform: scale(1.04);
+  z-index: 5;
+}
+.tv-card:focus {
+  transform: scale(1.06);
+}
+
+@keyframes pulse-dot {
+  50% {
+    opacity: 0.3;
+  }
+}
+.live-dot {
+  animation: pulse-dot 1.4s infinite;
+}
